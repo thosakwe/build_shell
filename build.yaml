@@ -1,0 +1,13 @@
+builders:
+  shell:
+    import: "package:build_shell/build_shell.dart"
+    builder_factories:
+      - shellBuilder
+    auto_apply: root_package
+    build_to: source
+    build_extensions:
+      .vm.app.dill:
+        - .sh
+        - .bat
+    required_inputs:
+      - .vm.app.dill
